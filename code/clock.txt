@@ -1,0 +1,15 @@
+function clock()
+	local str=''
+	for i=93,95 do
+		local s=tostr(stat(i))
+		if (#s<2) s='0'..s
+		if (i!=95) s=s..':'
+		str..=s;
+	end
+	return str
+end
+
+function drw_clock(str,x,y,c)
+	--rect(x,y,x+#str*4-2,y+4,2)
+	print(str,x,y,c)
+end
